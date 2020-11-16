@@ -18,12 +18,10 @@ This project will bring the JetBot functionality given by [jetbot.org](http://je
 * `jetbot_fs` - contains all functions related to controlling jetbot
 * `python basic/robot_basic.py` - Check if the robot wheels are working
 * `python basic/gamepad_basic.py` - Check if the Gamepad is working
+* Gamepad setup - `python jetbot_fs/setup_gamepad.py`
+    - **Important Note**: In my laptop, gamepad has two modes and they can be changed by pressing the **HOME** button. But, in Jetson, it only has one mode. So, keep that in mind while setting up the gamepad.
 * `python basic/gamepad_jetbot.py` - Move jetbot using gamepad
     - Y - Go Forward
     - A - Go Backward
     - X - Turn Left
     - B - Turn Right
-
-## To Do
-
-* Make function to direction save gamepad key map to yml file.
