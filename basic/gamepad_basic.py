@@ -23,6 +23,7 @@ def turn_right():
 def stop():
     print('STOP')
 
+
 # actions consist of a list of tuples => [(button, state, callback), ... ]
 action_list = [
     ('X', 0, stop),
@@ -40,8 +41,6 @@ actions = dict()
 for line in action_list:
     actions[str(line[0])+'_'+str(line[1])] = line[2]
 
-print(actions)
-
 
 def main():
     """Process all events forever."""
@@ -51,7 +50,7 @@ def main():
         while True:
             gp.process_events()
     except KeyboardInterrupt:
-        print("Bye!")
+        print("\nBye!")
 
 
 if __name__ == "__main__":

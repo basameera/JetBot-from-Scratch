@@ -9,82 +9,14 @@ import inputs
 import json
 
 host_name = os.uname()[1]
-print(host_name)
+print('Host name:', host_name)
 
 if host_name == 'Kiwi':
     # Jetson
-    # EVENT_ABB = (
-    #     # D-PAD, aka HAT
-    #     ('Absolute-ABS_HAT0X', 'HX'),
-    #     ('Absolute-ABS_HAT0Y', 'HY'),
-
-    #     # Axes
-    #     ('Absolute-ABS_X', 'AX'),
-    #     ('Absolute-ABS_Y', 'AY'),
-    #     ('Absolute-ABS_Z', 'AZ'),
-    #     ('Absolute-ABS_RZ', 'ARZ'),
-
-    #     # Face Buttons
-    #     ('Key-BTN_NORTH', 'X'),
-    #     ('Key-BTN_WEST', 'Y'),
-    #     ('Key-BTN_SOUTH', 'A'),
-    #     ('Key-BTN_EAST', 'B'),
-
-    #     # Trigger buttons
-    #     ('Key-BTN_TL', 'TL1'),
-    #     ('Key-BTN_TL2', 'TL2'),
-    #     ('Key-BTN_TR', 'TR1'),
-    #     ('Key-BTN_TR2', 'TR2'),
-
-    #     # control buttons
-    #     ('Key-BTN_MODE', 'MODE'),
-    #     ('Key-BTN_SELECT', 'SELECT'),
-    #     ('Key-BTN_START', 'START'),
-
-    #     # Thumb buttons
-    #     ('Key-BTN_THUMBL', 'THL'),
-    #     ('Key-BTN_THUMBR', 'THR'),
-
-    # )
-
     EVENT_ABB = os.path.join(os.getcwd(), 'jetbot_fs', 'jetson.json')
 
 if host_name == 'Linux':
     # # Laptop
-    # EVENT_ABB = (
-    #     # D-PAD, aka HAT
-    #     ('Absolute-ABS_HAT0X', 'HX'),
-    #     ('Absolute-ABS_HAT0Y', 'HY'),
-
-    #     # Axes
-    #     ('Absolute-ABS_X', 'AX'),
-    #     ('Absolute-ABS_Y', 'AY'),
-    #     ('Absolute-ABS_Z', 'AZ'),
-    #     ('Absolute-ABS_RZ', 'ARZ'),
-
-    #     # Face Buttons
-    #     ('Key-BTN_NORTH', 'X'),
-    #     ('Key-BTN_SOUTH', 'Y'),
-    #     ('Key-BTN_C', 'A'),
-    #     ('Key-BTN_EAST', 'B'),
-
-    #     # Trigger buttons
-    #     ('Key-BTN_WEST', 'TL1'),
-    #     ('Key-BTN_TL', 'TL2'),
-    #     ('Key-BTN_Z', 'TR1'),
-    #     ('Key-BTN_TR', 'TR2'),
-
-    #     # control buttons
-    #     ('Key-BTN_MODE', 'MODE'),
-    #     ('Key-BTN_TL2', 'SELECT'),
-    #     ('Key-BTN_TR2', 'START'),
-
-    #     # Thumb buttons
-    #     ('Key-BTN_SELECT', 'THL'),
-    #     ('Key-BTN_START', 'THR'),
-
-    # )
-
     EVENT_ABB = os.path.join(os.getcwd(), 'jetbot_fs', 'laptop.json')
 
 
@@ -105,8 +37,6 @@ class GamePad(object):
         self.MIN_ABS_DIFFERENCE = MIN_ABS_DIFFERENCE
         with open(abbrevs) as f:
             self.abbrevs = json.load(f)
-        # self.abbrevs = dict(abbrevs)
-        print(self.abbrevs)
 
         for key, value in self.abbrevs.items():
             if key.startswith('Absolute'):
