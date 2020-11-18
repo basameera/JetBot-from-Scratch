@@ -2,3 +2,4 @@ traitlets
 Adafruit_MotorHat
 Adafruit-SSD1306
 inputs
+pi-ina219

@@ -25,3 +25,4 @@ This project will bring the JetBot functionality given by [jetbot.org](http://je
     - A - Go Backward
     - X - Turn Left
     - B - Turn Right
+* `python basic/read_INA219_basic.py` - Read INA219
