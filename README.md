@@ -26,3 +26,4 @@ This project will bring the JetBot functionality given by [jetbot.org](http://je
     - X - Turn Left
     - B - Turn Right
 * `python basic/read_INA219_basic.py` - Read INA219
+* `python basic/temp_zones.py` - Read temperature zones
