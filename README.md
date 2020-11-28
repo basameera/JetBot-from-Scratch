@@ -12,6 +12,7 @@ This project will bring the JetBot functionality given by [jetbot.org](http://je
 * Python Miniconda - `conda create -n <env_name> python=3.7 pip`
 * Read Gamepad inputs - [inputs](https://github.com/zeth/inputs)
 * Install python packages - `pip install -r requirements.txt`
+* Camera - [https://github.com/basameera/CSI-Camera](https://github.com/basameera/CSI-Camera)
 
 ## Usage
 
