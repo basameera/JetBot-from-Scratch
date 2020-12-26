@@ -1,4 +1,3 @@
-from motor import Motor
 from Adafruit_MotorHAT import Adafruit_MotorHAT
 import time
 
