@@ -4,6 +4,8 @@ import time
 
 robot = Robot()
 
-robot.left(0.3)
-time.sleep(0.5)
+robot.forward(0.3)
+time.sleep(5)
+robot.backward(0.5)
+time.sleep(5)
 robot.stop()
